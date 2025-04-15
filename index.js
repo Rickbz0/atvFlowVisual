@@ -6,5 +6,5 @@ let numero = parseInt(prompt("Digite um numero:"));
     if (numero % 5 === 0) {
         alert("O numero é multiplo de 5.");
     } else {
-      alert("O número não é multiplo.");
+      alert("O numero não é multiplo.");
   }

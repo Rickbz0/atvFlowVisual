@@ -1,9 +1,9 @@
-// Solicita ao usuário que digite um número
-let numero = parseInt(prompt("Digite um número:"));
+let idade = parseFloat(prompt("Informe sua idade:"));
 
-// Verifica se o número é par
-if (numero % 2 === 0) {
-    alert("O número é par.");
-} else {
-    alert("O número não é par.");
-}
+if (isNaN(idade) || idade < 0) {
+    alert("Erro: digite uma idade válida usando apenas números.");
+  } else if (idade >= 18) {
+    alert("Você é maior de idade.");
+  } else {
+    alert("Você é menor de idade.");
+  }

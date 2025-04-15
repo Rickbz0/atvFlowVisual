@@ -1,10 +1,15 @@
-let numero = parseInt(prompt("Digite um numero:"));
+  let valorCompra = parseFloat(prompt("Digite o valor da compra:"));
+  
+  if (isNaN(valorCompra) || valorCompra <= 0) {
+      alert("Por favor, digite um valor válido para a compra.");
+  }
 
-    if (isNaN(numero)) {
-        alert("Digite um numero valido.");
-    }
-    if (numero % 5 === 0) {
-        alert("O numero é multiplo de 5.");
-    } else {
-      alert("O número não é multiplo.");
+  if (valorCompra >= 100) {
+      let desconto = valorCompra * 0.10;
+      let total = valorCompra - desconto;
+      alert(`Você ganhou um desconto de 10%! 
+             Valor do desconto: R$ ${desconto.toFixed(2)} 
+             Valor total: R$ ${total.toFixed(2)}`);
+  } else {
+      alert("O valor da compra não da desconto.");
   }

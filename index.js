@@ -1,9 +1,13 @@
-let idade = parseFloat(prompt("Informe sua idade:"));
+  let valorCompra = parseFloat(prompt("Digite o valor da compra:"));
+  
+  if (isNaN(valorCompra) || valorCompra <= 0) {
+      alert("Por favor, digite um valor válido para a compra.");
+  }
 
-if (isNaN(idade) || idade < 0) {
-    alert("Erro: digite uma idade válida usando apenas números.");
-  } else if (idade >= 18) {
-    alert("Você é maior de idade.");
+  if (valorCompra >= 100) {
+      let desconto = valorCompra * 0.10;
+      let total = valorCompra - desconto;
+      alert(`Você ganhou um desconto de 10%! \nValor do desconto: R$ ${desconto.toFixed(2)} \nValor total: R$ ${total.toFixed(2)}`);
   } else {
-    alert("Você é menor de idade.");
+      alert("O valor da compra não da desconto.");
   }
